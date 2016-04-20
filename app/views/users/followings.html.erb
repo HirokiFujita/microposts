@@ -1,0 +1,19 @@
+<div class="row">
+  <%= render 'user_info' %>
+  <div class="col-md-8">  
+    <h1>Following</h1>
+    <% @follower.each do |follower| %>
+      <div class=“media”>
+        <div class=“media-left”>
+　　　　<a href=“#”>
+　　　　  <%= link_to gravatar_for(follower, size: 50), follower, :class => "media-object" %>
+    　　</a>
+        </div>
+        <div class=“media-body”>
+          <h4 class=“media-heading”><%= follower.name %></h4>
+          <p><%= follower.profile %></p>
+        </div>
+      </div>
+    <% end %>  
+  </div>
+</div>  
